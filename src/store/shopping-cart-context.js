@@ -30,16 +30,20 @@ export function ShoppingCartContextProvider(props) {
 
     function addTotalItemsHandler(item) {
         setTotalItems((prevTotalItems) => {
-            return prevTotalItems.concat(item);
+            return prevTotalItems.concat(item)
         });
+        setTotalSortedItems((prevTotalItems) => {
+            return prevTotalItems.concat(item)
+        });
+
+        console.log('sorted items ',totalSortedItems)
 
     }
 
     function sortedItemsHandler(size = '') {
         setUserSortType(size);
         setTotalSortedItems(totalItems.filter(item => item.details.size === size));
-        // setTotalItems( totalItems.filter(item => item.details.size === size));
-    
+
     }
 
 
@@ -47,10 +51,10 @@ export function ShoppingCartContextProvider(props) {
     const context = {
         cartItems: userCartItems,
         cartItemCount: userCartItems.length,
-        totalItemsCount: totalItems.length,
+        totalItemsCount: totalSortedItems.length,
         totalItems:totalSortedItems,
         sortType: userSortType,
-        resultItemCount: totalItems.filter(item => item.details.size === userSortType).length,
+        resultItemCount: 5,//totalItems.filter(item => item.details.size === userSortType).length,
         addToCart: addToCartHandler,
         addTotalItems: addTotalItemsHandler,
         sortRecords: sortedItemsHandler
