@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ShoppingCartContextProvider } from './store/shopping-cart-context';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ShoppingCartContextProvider>
+      <App />
+  </ShoppingCartContextProvider>,
   document.getElementById('root')
 );
 
