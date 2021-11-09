@@ -12,10 +12,7 @@ function ShoppingDashboard(props) {
         fetch('https://my-json-server.typicode.com/prasadhewage/ecommerce/shipments').then((response) => {
             return response.json();
         }).then(data => {
-            const salesItems = [];
             data.forEach(items => {
-                shoppingCartCtx.addTotalItems(items);
-                salesItems.push(items);
                 shoppingCartCtx.addTotalItems(items);
             });
 

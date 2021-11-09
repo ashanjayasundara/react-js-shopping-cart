@@ -35,15 +35,12 @@ export function ShoppingCartContextProvider(props) {
         setTotalSortedItems((prevTotalItems) => {
             return prevTotalItems.concat(item)
         });
-
-        console.log('sorted items ',totalSortedItems)
-
     }
 
     function sortedItemsHandler(size = '') {
         setUserSortType(size);
-        setTotalSortedItems(totalItems.filter(item => item.details.size === size));
-
+        const filterData = totalItems.filter(item => item.details.size === size);
+        setTotalSortedItems(filterData);
     }
 
 
@@ -52,7 +49,7 @@ export function ShoppingCartContextProvider(props) {
         cartItems: userCartItems,
         cartItemCount: userCartItems.length,
         totalItemsCount: totalSortedItems.length,
-        totalItems:totalSortedItems,
+        totalItems: totalSortedItems,
         sortType: userSortType,
         resultItemCount: 5,//totalItems.filter(item => item.details.size === userSortType).length,
         addToCart: addToCartHandler,
