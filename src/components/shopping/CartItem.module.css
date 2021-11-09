@@ -1,0 +1,71 @@
+.itemContainer {
+    display: 'flex';
+    flex: 1;
+    flex-direction: 'column';
+    width: 30rem;
+    min-height: 160px;
+    padding-top: 10px;
+    background-color: transparent;
+    border: 0px;
+    border-top: 5px;
+    border-color: #000;
+    position: relative;
+    border-style: solid;
+  }
+  
+  .itemRemove {
+    color: 'black';
+    right: 20px;
+    position: absolute;
+    font-size: 22px;
+    top: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .itemContent {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .itemImageContainer {
+    display: block;
+    width: 8.25rem;
+    margin-right: 10px;
+  }
+  
+  .itemImage {
+    width: 7.25rem;
+    vertical-align: middle;
+    margin: auto;
+    height: 140px;
+  }
+  
+  .itemDescription {
+    display: block;
+    width: 13.5rem;
+    margin-right: 10px;
+  }
+  
+  .itemPrice{
+    display: block; width: 5.75rem;
+  }
+  
+  .itemDescriptionText {
+    font-size: 16px;
+    overflow-wrap: break-word;
+    text-align: left;
+    color: #fff;
+  }
+  
+  .lightGray {
+    color: #00FF00 !important;
+  }
+  .gold{
+    color: gold !important;
+    text-align: right !important;
+  }
+  

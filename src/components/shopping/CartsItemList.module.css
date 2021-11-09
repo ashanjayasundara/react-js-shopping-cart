@@ -1,0 +1,117 @@
+.modal {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: #4A4A4A;
+  padding: 1rem;
+  text-align: center;
+  width: 30rem;
+  z-index: 1000000;
+  position: fixed;
+  top: 0;
+  right: 0px;
+  height: 100%;
+}
+
+.badge {
+  background-color: gold;
+  color: black;
+  border-radius: 13px;
+  width: 26px;
+  height: 26px;
+  font-size: 12px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.close {
+  right: 32rem;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  background-color: #4A4A4A;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.itemList {
+  margin: 25px 10px 10px 10px;
+  overflow: hidden;
+}
+
+.itemContainer {
+  display: 'flex';
+  flex: 1;
+  flex-direction: 'column';
+  width: 30rem;
+  min-height: 160px;
+  padding-top: 10px;
+  background-color: transparent;
+  border: 0px;
+  border-top: 5px;
+  border-color: #000;
+  position: relative;
+  border-style: solid;
+}
+
+.itemRemove {
+  color: 'black';
+  right: 20px;
+  position: absolute;
+  font-size: 22px;
+  top: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.itemContent {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+}
+
+.itemImageContainer {
+  display: block;
+  width: 8.25rem;
+  margin-right: 10px;
+}
+
+.itemImage {
+  width: 7.25rem;
+  vertical-align: middle;
+  margin: auto;
+  height: 140px;
+}
+
+.itemDescription {
+  display: block;
+  width: 13.5rem;
+  margin-right: 10px;
+}
+
+.itemPrice{
+  display: block; width: 5.75rem;
+}
+
+.itemDescriptionText {
+  font-size: 16px;
+  overflow-wrap: break-word;
+  text-align: left;
+  color: #fff;
+}
+
+.lightGray {
+  color: #00FF00 !important;
+}
+.gold{
+  color: gold !important;
+  text-align: right !important;
+}

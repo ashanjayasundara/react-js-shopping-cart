@@ -1,0 +1,25 @@
+.badge {
+    background-color: gold;
+    color: black;
+    font-size: 12px;
+    padding-top: 7px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 12px;
+    padding: 0 0.6rem;
+    margin-left: 0.5rem;
+}
+
+.icon {
+    font-size: 45px;
+    margin: 0px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}

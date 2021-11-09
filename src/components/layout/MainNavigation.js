@@ -1,10 +1,16 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import ShoppingCartContext from "../../store/shopping-cart-context";
 import mainNavCSS from './MainNavigation.module.css';
+import CartItemList from "../shopping/CartItemsList";
+import CartIcon from "../../ui/CartIon";
 
 function MainNavigation(props) {
     const shoppingCartCtx = useContext(ShoppingCartContext);
+    const [showShoppingCart, setShowShoppingCart] = useState(false);
 
+    function showCart() {
+        setShowShoppingCart(!showShoppingCart)
+    }
     return <header className={mainNavCSS.header}>
         <div className={mainNavCSS.leftSideBar}>Sizes</div>
         <div className={mainNavCSS.rightSideBar}>
@@ -25,8 +31,11 @@ function MainNavigation(props) {
 
         </div>
         <div className={mainNavCSS.cartBtn}>
-            x {shoppingCartCtx.cartItemCount}
+            <CartIcon onClick={showCart} isOpen={showShoppingCart} fullView={false}/>
         </div>
+        {showShoppingCart &&
+            <CartItemList closeNav={showCart} onClick={showCart} isOpen={showShoppingCart} />
+        }
     </header>
 }
 
