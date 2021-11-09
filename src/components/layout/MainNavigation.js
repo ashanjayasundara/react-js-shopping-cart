@@ -20,8 +20,12 @@ function MainNavigation(props) {
                     <option value="opel">Size</option>
                 </select>
                 <label>Order By</label>
+
             </div>
 
+        </div>
+        <div className={mainNavCSS.cartBtn}>
+            x {shoppingCartCtx.cartItemCount}
         </div>
     </header>
 }
