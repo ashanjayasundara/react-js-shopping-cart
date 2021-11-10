@@ -31,10 +31,10 @@ function MainNavigation(props) {
 
         </div>
         <div className={mainNavCSS.cartBtn}>
-            <CartIcon onClick={showCart} isOpen={showShoppingCart} fullView={false}/>
+            <CartIcon onClick={showCart} isOpen={showShoppingCart} fullView={false} />
         </div>
         {showShoppingCart &&
-            <CartItemList closeNav={showCart} onClick={showCart} isOpen={showShoppingCart} />
+            <CartItemList closeNav={showCart} onClick={showCart} isOpen={showShoppingCart}/>
         }
     </header>
 }

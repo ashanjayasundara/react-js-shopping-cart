@@ -6,7 +6,7 @@ function CartItem(props) {
 
 
     return <div className={listCSS.itemContainer}>
-        <div className={listCSS.itemRemove} onClick={props.removeItem(props.elementID)}>X</div>
+        <div className={listCSS.itemRemove}>X</div>
         <div className={listCSS.itemContent}>
             <div className={listCSS.itemImageContainer}>
                 <img src={props.details.image} className={listCSS.itemImage} alt="" />

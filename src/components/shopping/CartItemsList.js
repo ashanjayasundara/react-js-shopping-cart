@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 import ShoppingCartContext from '../../store/shopping-cart-context';
 import CartIcon from '../../ui/CartIon';
 import CartItem from './CartItem';
@@ -13,10 +13,7 @@ function CartItemList(props) {
         <div className={listCSS.itemList}>
 
             {shoppingCartCtx.cartItems.map((item, index) => {
-                return <CartItem key={index + item.cartID} details={item.details} name={item.name} elementID={item.cartID} removeItem={(id) => {
-                    // shoppingCartCtx.removeCartItem(item.cartID);
-                    console.log('remove item click ' + id);
-                }} />
+                return <CartItem key={index + item.cartID} details={item.details} name={item.name} elementID={item.cartID} removeItem={()=>{}} />
             })
 
             }
